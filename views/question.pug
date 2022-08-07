@@ -1,0 +1,56 @@
+extends layout.pug
+
+include utils.pug
+
+block content
+    script(src="/javascripts/question.js" type="module")
+    div.question-page-card
+        div(id='question-content')= question.content
+        div(class="question-page-card-bottom-details card-bottom-row")
+            div(class="question-card-user")
+                span.material-symbols-outlined='person'
+                    a(href='/' class='user-link')=question.User.username
+            if locals.authenticated && locals.user.id === question.userId
+                div.edit-delete-buttons
+                    a(class='btn card-btn question-delete-btn' href=`/questions/delete/${question.id}` role='button') Delete
+                    a(class='btn card-btn question-edit-btn' href=`/questions/edit/${question.id}` role='button') Edit
+    if locals.authenticated
+        div(id='new-answer-btn-container')
+            button(id=`new-answer-create`) Create Answer
+        div(class='hidden' id='create-answer-form')
+            h3 Create an Answer
+            div(class="hidden" id="questionIdDiv")=`${question.id}`
+            +validationErrorSummary(errors)
+            //- form(id="`create-answer-form`" class="new-answer-div")
+            form(action= '/answers/'+questionId+'/create' method='post' class="new-answer-div")
+                input(type='hidden' name='_csrf' value=csrfToken)
+                input(type='hidden' name='questionId' value=questionId)
+                label(for="body" id="body-label")= Body
+                textarea(type="textarea" cols="70" rows="10" name="body" id="new-answer-body")
+                div(class='submit-cancel-btns')
+                    button(type="submit" class="btn card-btn answer-submit hidden" id=`new-answer-submit`) Submit Answer
+
+    if answers && answers.length > 0
+        h3(id='h3-answers') Answers
+        input(type='search' value='' class='search-bar' placeholder='Search')
+        div(class="answers-container")
+            each answer in answers
+                div(class="answer-card" id=`answer-card-${answer.id}`)
+                    div(class='answer-body' id=`${answer.id}-body`)=answer.body
+                    //- p= userVotes[answer.id]
+                    div(id=`edit-form-div-${answer.id}`)
+                        form(class='hidden' id=`edit-form-${answer.id}`)
+                                    textarea(type="textarea" cols="70" rows="10" name="body" value=answer.body id=`${answer.id}-edit-body`)
+                    div(class="answer-page-card-bottom-details card-bottom-row")
+                        div(class="question-card-user")
+                            span.material-symbols-outlined='person'
+                                a(href='/' class='user-link')=answer.User.username
+                        if locals.authenticated && locals.user.id === answer.userId
+                            div.edit-delete-buttons
+                                button(class='btn card-btn answer-delete-btn' id=`delete-answer-${answer.id}`) Delete
+                                button(class="btn card-btn answer-edit-btn" id=`edit-btn-${answer.id}`) Edit
+                                button(class="btn card-btn edit-submit hidden" id=`edit-submit-${answer.id}`) Submit Edit
+            div(class='no-answers-found hidden') No answers found.
+
+    else
+        p(class='no-answers-yet') There are no answers yet.

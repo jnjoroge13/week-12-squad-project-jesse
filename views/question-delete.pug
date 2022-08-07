@@ -1,0 +1,90 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+    title J3C Group - #{title}
+    link(rel='stylesheet' href='/stylesheets/styles.css')
+    link(rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0")
+    //- script(src="/javascripts/answer-answervotes.js" type="module")
+    script(src="/javascripts/answerDelete.js" type="module")
+    script(src="/javascripts/answerEdit.js" type="module")
+
+
+  body
+    div.nav-bar
+
+      div(class="nav-bar-logo")
+      div(class="main-nav-buttons")
+        div(class='nav-home-btn nav-row')
+          span.material-symbols-outlined='home'
+            a(href='/' class='home-btn nav-btn btn') Home
+
+        div(class='nav-about-btn nav-row')
+          span.material-symbols-outlined='info'
+            a(href='/about' class='home-btn nav-btn btn') About
+
+        div(class='nav-questions-btn nav-row')
+          span.material-symbols-outlined='quiz'
+            a(href='/questions' class='home-btn nav-btn btn') Questions
+
+        div(class='nav-tag-btn nav-row')
+          span.material-symbols-outlined='category'
+            a(href='/' class='home-btn nav-btn btn') Tags
+
+      div(class="responsive-nav-buttons")
+        if locals.authenticated
+
+          div.nav-activity-btn(class='nav-home-btn nav-row-responsive nav-row-responsive-btn user-btn')
+            span.material-symbols-outlined='article'
+              a(href=`/users/${user.id}/${user.username}` class='home-btn nav-btn btn') Activity
+
+          div(class='nav-user-btn nav-row-responsive nav-row-responsive-btn user-btn')
+            span.material-symbols-outlined='account_circle'
+              a(href=`/users/${user.id}/${user.username}` class='user-btn nav-btn btn') User
+
+          div(class='nav-logout-btn nav-row-responsive')
+            form(action='/users/logout' method='post')
+              button(class='log-btn btn' type='submit') Logout
+
+          div(class='nav-create-question-btn nav-row-responsive')
+                a(href='/questions/create') Create Question
+        else
+          div(class='login-button nav-row-responsive')
+              a(href='/users/login' class='log-btn btn') Login
+          div(class='signup-button nav-row-responsive')
+              a(href='/users/Signup' class='log-btn signup-btn btn') Signup
+
+
+    .main-content
+      div.title-card
+          h2#layout-header #{title}
+      div
+        h3= question.title
+        div
+          p Proceed with deleting this question?
+        div
+          form(action=`/questions/delete/${question.id}` method='post')
+            input(type='hidden' name='_csrf' value=csrfToken)
+            button(type='submit') Delete Question
+            a(href='/questions' role='button') Cancel
+
+
+
+//- include utils.pug
+
+//- block content
+//-   +validationErrorSummary(errors)
+
+//-   form(class='login-form form' action='/users/login' method='post')
+
+
+//-     input(type='hidden' name='_csrf' value=csrfToken)
+//-     +field('Email Address', 'email', email)
+//-     +field('Password', 'password', null, 'password')
+//-     div(class='submit-cancel-btns')
+//-       button(type='submit' class='btn login-btn') Login
+//-       a(href='/' class='btn cancel-btn') Cancel
+//-     div
+//-       a(href='/users/signup' class=no-account-btn) Don't have an account?

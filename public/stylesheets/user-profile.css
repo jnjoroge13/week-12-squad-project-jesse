@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.nav-bar div {
+  height: 50px;
+  width: 85px;
+  position: relative;
+}
+
+/* img {
+  display: none;
+} */
+.nav-bar div span,
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.nav-bar div {
+  background-color: whitesmoke;
+  color: salmon;
+  transform-origin: 0 0;
+}
+
+a.home {
+  background-color: salmon;
+  color: whitesmoke;
+  transform-origin: 0 0 10px;
+  transform: rotateY(-90deg);
+}
+
+.nav-bar div:hover a.home {
+  transform: rotateY(0deg);
+}
+div:hover .front {
+  transform: rotateY(90deg);
+}
+/* img {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  margin-left: 20px;
+  margin-top: 25px;
+} */
+/* img:hover {
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+} */
+
+img {
+  display: none;
+}
+/* .nav-bar {
+  width: 150px;
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 25px;
+  position: relative;
+}
+
+.nav-bar div {
+  float: left;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-bar div a:hover {
+  color: yellow;
+  background-color: red;
+}
+
+.nav-bar div {
+  padding: 5px;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+}
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+#edit-profile {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.user-dropdown:hover #edit-profile {
+  display: block;
+}
+
+#hello-message {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  border: 3px solid green;
+} */

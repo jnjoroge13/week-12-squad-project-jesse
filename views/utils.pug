@@ -1,0 +1,13 @@
+mixin validationErrorSummary(errors)
+  if errors
+    div(role='alert' class='errors')
+      p(class='error-title') The following error(s) occurred:
+      ul(class='error-list')
+        each error in errors
+          li(class='error-bullet')= error
+
+mixin field(labelText, fieldName, fieldValue, fieldType = 'text')
+  div(id=`${fieldName}-div`)
+    label(for=fieldName id=`${fieldName}-label`)= labelText
+    <br>
+    input(type=fieldType id=`${fieldName}` name=fieldName value=fieldValue)

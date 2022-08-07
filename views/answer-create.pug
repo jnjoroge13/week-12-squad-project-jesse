@@ -1,0 +1,15 @@
+//- extends layout.pug
+
+include utils.pug
+
+extends question.pug
+
+block content
+  +validationErrorSummary(errors)
+  form(action= '/answers/'+questionId+'/create' method='post' class="new-question-div")
+    input(type='hidden' name='_csrf' value=csrfToken)
+    input(type='hidden' name='questionId' value=questionId)
+    +field('Answer', 'body', answer.body)
+    div(class='submit-cancel-btns')
+      button(type='submit' class='btn create-btn') Submit Answer
+      a(href='/questions/' class='btn cancel-btn') Cancel

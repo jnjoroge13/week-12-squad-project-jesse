@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+    script(src="/javascripts/questions-list.js" type="module")
+    input(type='search' value='' class='search-bar' placeholder='Search')
+        //- button(type='submit' class='btn search-btn') Search
+    if questions && questions.length > 0
+        each question in questions
+            div.question-list-card
+                div.question-card-heading
+                    //- p="detail 1   detail 2   detail 3"
+                div.question-card-title
+                    a.question-title(href=`/questions/${question.id}`)=question.title
+                div.question-card-tag-and-user
+                    div.question-card-tag
+                    div.question-card-user
+                        span.material-symbols-outlined='person'
+                            a(href='/' class='home-btn nav-btn btn')=question.User.username
+        div(class='no-questions-found hidden') No questions found.
+
+    else
+        p: em There are no questions here. Why not add one?

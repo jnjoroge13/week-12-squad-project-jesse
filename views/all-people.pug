@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+    table
+      thead
+        tr
+          th(scope='col' class='user-table-headers') First Name
+          th(scope='col' class='user-table-headers') Last Name
+          th(scope='col' class='user-table-headers') UserName
+      tbody
+        each person in all
+            tr
+                td(class='user-info')= person.firstName
+                td(class='user-info')= person.lastName
+                td(class='user-info')= person.username

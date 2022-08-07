@@ -1,0 +1,736 @@
+/* body {
+    background-color: #181A1B;
+    color: white;
+    font-family: 'Whitney', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+} */
+
+a {
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 1px solid #018dc4;
+    border-radius: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    text-overflow: clip;
+    background: #F77A61;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 1);
+    margin: 5px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-row:hover, .nav-row-responsive-btn:hover  {
+    border: 1px solid salmon;
+    color: salmon;
+    border-radius: 40px;
+}
+
+.nav-row:active {
+    border: 1px solid salmon;
+    color: salmon;
+    border-radius: 40px;
+    background-color: #F7D7C8;
+}
+
+/* a:hover {
+    background-color: #bb4d00;
+    transition: transform .5s;
+} */
+
+.hidden {
+    display: none;
+}
+.nav-bar {
+    top: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: white;
+    color: black;
+    border: #181A1B;
+}
+
+.main-content {
+    display: flex;
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #E9F6FF;
+    color: black;
+    flex-direction: column;
+    width: 700px;
+}
+
+.splash {
+    color: black;
+}
+
+/* ******* Logo ******* */
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* ******* Layout ******* */
+
+body {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    background-color: white;
+    color: white;
+    font-family: "Helvetica Neue"
+}
+
+/* Navigation Bar */
+
+.nav-bar-logo {
+    background-image: url("../images/nav-bar-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    all: initial;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Helvetica Neue";
+    padding-left: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.log-btn {
+    all: initial;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 5px;
+    /* border: 1px solid #018dc4; */
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.9);
+    text-overflow: clip;
+    background-color: #33ADFF;
+    border: 1px solid #5F8097;
+    margin: 5px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    float: left;
+    padding: 3px 10px 3px 5px;
+    margin-bottom: 0px;
+}
+
+.signup-btn {
+    background-color: #F77A61;
+}
+
+.nav-row {
+    display: flex;
+    margin-bottom: 10px;
+    height: 18px;
+    line-height: 18px;
+    padding-bottom: 6px;
+    padding-left: 5px;
+}
+
+.nav-row-responsive {
+    display: flex;
+    line-height: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.user-btn {
+    height: 18px;
+    line-height: 18px;
+}
+.main-nav-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.responsive-nav-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.nav-create-question-btn > {
+    margin-top: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    float: left;
+}
+
+/* .logout-btn  {
+    margin-top: 30px;
+    background-color: #018dc4;
+} */
+
+.title-card {
+    background-color: white;
+    margin: 1px 2px 10px 2px;
+    border: 2px solid #5F8097;
+    padding-left: 10px;
+}
+
+.nav-bar {
+    top: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 170px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: white;
+    color: black;
+    border: #181A1B;
+}
+
+/* .login-button {
+
+} */
+
+/* .login-btn {
+    background-color: #018dc4;
+} */
+/* a(href='/users/login' class='login-btn nav-btn btn') Login
+div(class='signup-button nav-row')
+a(href='/users/Signup' class='signup-btn btn') Signup */
+
+/* ******* Question Card ******* */
+.question-list-card {
+    background-color: #F7D7C8;
+    margin: 2px 5px 10px 5px;
+    border: 1px solid #5F8097;
+
+}
+
+a.question-title {
+    all: initial;
+    color: #018dc4;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+}
+
+
+
+.main-content {
+    display: flex;
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #E9F6FF;
+    color: black;
+    flex-direction: column;
+    width: 700px;
+}
+
+.splash {
+    color: black;
+}
+
+
+/* ******* Answer Card ******* */
+
+
+.answer-card {
+    background-color: white;
+    padding: 15px 10px 15px 10px;
+    margin: 2px 5px 10px 5px;
+    border: 1px solid #5F8097;
+}
+
+
+/* ******* Question & Answer Card ******* */
+
+.card-btn {
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin: 2px;
+    font-size: 12px;
+}
+
+.user-link {
+    all: initial;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Helvetica Neue";
+    padding-left: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.card-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+
+.question-page-card {
+    background-color: white;
+    padding: 15px 10px 15px 10px;
+    margin: 2px 5px 2px 5px;
+}
+
+
+/* */
+
+.submit-cancel-btns {
+    display: flex;
+    justify-content: end;
+}
+
+.answer-submit {
+    /* padding: 5px 10px;
+    border-radius: 8px;
+    margin: 2px;
+    font-size: 12px; */
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #018dc4;
+    border-radius: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    text-overflow: clip;
+    background: #F77A61;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 1);
+    margin: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* LAYOUT */
+/* Does this work? */
+
+
+.login-header {
+    display: grid;
+    border: solid white;
+    grid-area: 1 / 5 / 2 / 6;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.login-form {
+    display: grid;
+    gap: 10px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+/* .container {
+    border: solid white;
+    grid-area: 2 / 2 / 5 / 5;
+} */
+
+.hidden {
+    display: none;
+}
+
+/* ************** Splash Page ************** */
+
+.top-bar {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 70px;
+    display: flex;
+    background-color: white;
+    color: white;
+    font-family: "Helvetica Neue";
+    justify-content: space-between;
+}
+.splash-logo {
+    color: black;
+    font-family: "Helvetica Neue";
+    font-size: 60px;
+    font-weight: 900px;
+    display: flex;
+}
+.splash-buttons {
+    display: flex;
+}
+
+.splash-button {
+    color: black;
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+}
+
+body.splash-page-body {
+    all: initial;
+}
+
+.splash-page-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 700px;
+    display: flex;
+    background-color: white;
+    color: white;
+    font-family: "Helvetica Neue";
+}
+
+.splash-right-container {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    min-width: 500px;
+    flex-basis: 500px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    color: black;
+    justify-content: end
+}
+
+
+
+.splash-left-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 700px;
+    flex-basis: 700px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: white;
+    color: black;
+    border: #181A1B;
+    background-image: url("../images/bg5.png");
+    background-size: cover;
+    margin: 30px;
+
+}
+
+.message-box {
+    color: white;
+    font-family: "Helvetica Neue";
+    font-size: 60px;
+    font-weight: 900px;
+    display: flex;
+    text-shadow: black 5px 0 10px;
+    margin: 12px 15px 12px 15px;
+    text-align: center;
+}
+
+.icon-box {
+    display: flex;
+    height: 400px;
+    background-image: url("../images/icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.proceed {
+    color: black;
+    font-family: "Helvetica Neue";
+    font-size: 60px;
+    font-weight: 900px;
+}
+
+/* *************** Error Box ************** */
+.error-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-box > div {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.error-box-picture {
+    background-image: url("../images/icon-error.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 400px;
+}
+
+.error-box-message {
+    font-size: 28px;
+    color: black;
+    font-family: "Helvetic Nueue";
+}
+
+.error-box-special {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-box-special > .error-box-picture  {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/icon-error.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 400px;
+}
+
+.about-section-card {
+    background-color: white;
+    padding: 15px 10px 15px 10px;
+    margin: 2px 5px 10px 5px;
+    border: 1px solid #5F8097;
+
+}
+
+.new-question-div {
+    background-color: white;
+    padding: 15px 10px 15px 10px;
+    margin: 2px 5px 10px 5px;
+    border: 1px solid #5F8097;
+}
+
+.form {
+    background-color: white;
+    padding: 15px 10px 15px 10px;
+    margin: 2px 5px 10px 5px;
+    border: 1px solid #5F8097;
+    margin: 0 auto;
+    padding-bottom: 75px;
+    width: 300px;
+}
+
+.errors {
+    font-family: "Helvetica Nueue";
+    font-weight: 500;
+    font-size: 16px;
+    background-color: white;
+    padding: 15px 10px 15px 10px;
+    margin: 2px 5px 10px 5px;
+    border: 3px solid salmon;
+}
+
+.error-bullet {
+    color: salmon;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+/* .splash-message-display-container {
+    display: flex;
+    background-image: url("../images/bg3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+/* .splash-navigation-container {
+    border: black solid 1px;
+    display: flex;
+} */
+
+
+/* div(id="splash-page-container" class="splash-page-container")
+    div(id="top-container" class="top-container")
+        div(id="logo-container" class="logo-container")
+        div(id="menu-container" class="menu-container")
+    div(id="center-container" class="center-container")
+        div(id="message-display-container" class="message-display-container")
+        div(id="navigation-container" class="navigation-container") */
+
+/* ************** Answers List ************** */
+
+.search-bar {
+    margin: 5px 40px;
+    height: 40px;
+    font-size: large;
+    border-radius: 7px;
+    border: #F7D7C8 2px solid;
+}
+.answer-card,
+.question-page-card {
+    margin: 7px 7px;
+    border: #F7D7C8 2px solid;
+    border-radius: 15px;
+}
+
+.no-answers-found {
+    padding: 0 210px;
+    margin-top: 20px;
+}
+.no-answers-yet {
+    padding: 0 190px;
+    margin-top: 20px;
+}
+#new-answer-btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+#new-answer-create {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    border: lightgray 2px solid;
+    background-color: #F7D7C8;
+}
+#new-answer-create:hover {
+    cursor: pointer;
+    background-color: #33ADFF;
+    color: whitesmoke;
+    border: #33ADFF 2px solid;
+}
+.main-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.main-content,
+.answers-container
+ {
+    border-radius: 15px;
+}
+
+.title-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 100px 10px 100px;
+    border: #F7D7C8 2px solid;
+    border-radius: 15px;
+}
+#question-content {
+    padding: 0px 40px 0px 40px;
+    font-size: large;
+    margin:10px
+
+}
+.question-edit-btn,
+.question-delete-btn,
+.answer-delete-btn,
+.answer-edit-btn,
+#new-answer-submit {
+    background-color: salmon;
+    color: white;
+    /* font-weight: bold; */
+    opacity: 0.9;
+    cursor: pointer;
+    box-shadow: black 1px 1px 1px;
+    border: black 1px solid;
+}
+.question-edit-btn:hover,
+.question-delete-btn:hover,
+.answer-delete-btn:hover,
+#new-answer-submit:hover,
+.answer-edit-btn:hover {
+    background-color: white;
+    color: salmon;
+    /* font-weight: bold; */
+    opacity: 0.9;
+}
+#h3-answers {
+    /* margin-left: 45%; */
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ******* Question Card ******* */
+.question-card-heading>p,
+.question-card-title,
+.question-card-user{
+    padding-top: 5px;
+    margin: 0px;
+}
+.question-list-card {
+    margin: 7px 7px;
+    padding: 5px 20px;
+    border: #F7D7C8 2px solid;
+    border-radius: 15px;
+    background-color: white;
+    pointer-events: none;
+}
+.question-list-card:hover {
+background-color: rgb(240, 251, 255);
+}
+.question-title:hover,
+.material-symbols-outlined > .btn:hover {
+    cursor: pointer;
+    color: salmon;
+}
+
+a.question-title {
+    all: initial;
+    color: #018dc4;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+}
+
+.material-symbols-outlined > .btn {
+
+}
+
+/* ************** TEST FEATURES ************** */
+
+/* .btn {
+    text-transform: uppercase;
+}
+.btn:hover .btn-slide-show-text1 {
+    margin-left: 65px;
+}
+
+.btn-pushable {
+    padding: 15px;
+    margin-right: 5px;
+    height: 50px;
+    width: 180px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-family: inherit;
+    border-radius: 3px;
+}
+
+.btn-pushable:hover {
+    transition: all 0.1s ease-in 0s;
+}
+
+.btn-pushable:active {
+    transform: translateY(4px);
+    border-bottom-width: 2px;
+    box-shadow: none;
+}
+
+.btn-pushable--orange {
+    background: #f57c00;
+    box-shadow: #f57c00 0px 6px 0px;
+    border-bottom: 3px solid #bb4d00;
+}
+
+.btn-pushable--orange:hover {
+    background: #bb4d00;
+    box-shadow: #bb4d00 0px 4px 1px;
+} */

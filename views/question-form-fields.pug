@@ -1,0 +1,12 @@
+include utils.pug
+
+input(type='hidden' name='_csrf' value=csrfToken)
++field('Title', 'title', question.title)
++field('Content', 'content', question.content)
+
+
+
+mixin field(labelText, fieldName, fieldValue, fieldType = 'text')
+  div(id=`${fieldName}-div`)
+    label(for=fieldName id=`${fieldName}-label`)= labelText
+    input(type=fieldType id=`${fieldName}` name=fieldName value=fieldValue)

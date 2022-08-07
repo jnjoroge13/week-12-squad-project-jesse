@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  div(class='delete-answer')
+    p(id='delete-answer-text') Proceed with deleting this answer?
+    form(action=`/answers/delete/${answer.id}` method='post' class='delete-cancel-btns')
+      input(type='hidden' name='_csrf' value=csrfToken)
+      input(type='hidden' name='questionId' value=answer.questionId)
+      button(class='btn delete-answer-btn' type='submit') Delete Answer
+      a(class='btn cancel-answer-btn' href='/questions/'+answer.questionId role='button') Cancel

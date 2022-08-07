@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.background-for-home {
+  background-color: black;
+}
+
+.background-for-login {
+  background-color: black;
+}
+
+.background-for-about {
+  background-color: black;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* this is to help me understand the heigh of the body flex so i can adjsut accrodingly, when i change height it will take in alsign items, jsutidy content to help arange items.*/
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.home-one {
+  /* Do we want white here? */
+  color: white;
+  /* Transofmation of page */
+  transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+  text-decoration: none;
+}
+.home-one:hover {
+  color: white;
+  transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.home-one:after {
+  content: "";
+  color: white;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: salmon;
+  clip-path: circle(0% at 50% calc(50%));
+  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.home-one:hover::after {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* this is to help me understand the heigh of the body flex so i can adjsut accrodingly, when i change height it will take in alsign items, jsutidy content to help arange items.*/
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.login-two {
+  text-decoration: none;
+  /* Do we want white here? */
+  color: white;
+  /* Transofmation of page */
+  transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+  margin-bottom: 35px;
+}
+.login-two:hover {
+  color: white;
+  transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.login-two:before {
+  content: "";
+  color: white;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: salmon;
+  clip-path: circle(0% at 50% calc(50%));
+  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.login-two:hover:before {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* this is to help me understand the heigh of the body flex so i can adjsut accrodingly, when i change height it will take in alsign items, jsutidy content to help arange items.*/
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.about-three {
+  text-decoration: none;
+  /* Do we want white here? */
+  color: white;
+  /* Transofmation of page */
+  transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+}
+.about-three:hover {
+  color: white;
+  transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.about-three:before {
+  content: "";
+  color: white;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: salmon;
+  clip-path: circle(0% at 50% calc(50%));
+  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.about-three:hover:before {
+  clip-path: circle(100% at 50% 50%);
+}
+p#home {
+  color: black;
+}
+p#login {
+  color: black;
+}
+p#demo {
+  color: black;
+}
+p#about {
+  color: black;
+}

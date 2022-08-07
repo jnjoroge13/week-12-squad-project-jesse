@@ -1,0 +1,135 @@
+
+
+
+a,
+#new-answer-create,
+.btn {
+    background-color: #1cbfff;
+}
+
+.nav-btn,
+.material-symbols-outlined {
+    background-color: #0b0c1b;
+    color: white;
+}
+
+
+.main-content,
+.question-content,
+.title-card,
+#layout-header,
+.question-page-card,
+.answer-card,
+.answer-page-card-bottom-details,
+.answer-body,
+.card-bottom-row,
+.question-card-user,
+.edit-delete-buttons,
+.user-link,
+.answers-container,
+#answers-header,
+.answer-card>p,
+.no-answers-found,
+#create-answer-form,
+#create-answer-header,
+#create-answer-header>h3,
+.submit-cancel-btns,
+.card-btn,
+.question-card-user>.material-symbols-outlined {
+    background-color: #26273b;
+    color: white;
+}
+
+.answer-card {
+    margin: 7px 7px;
+    border: #1cbfff 3px solid;
+    border-radius: 15px;
+}
+
+#create-answer-form {
+    display: grid;
+    gap: 10px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+#create-answer-form.hidden {
+    display: none
+}
+
+#answers-header {
+    align-self: center;
+}
+
+.new-answer-div {
+    justify-content: center;
+}
+
+#new-answer-body,
+.no-answers-yet {
+    color: white;
+    font-size: large;
+    width: 520px;
+}
+.search-bar {
+    color: white;
+    margin: 5px 40px;
+    height: 40px;
+    font-size: large;
+}
+.search-bar::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.question-edit-btn,
+.question-delete-btn,
+.answer-delete-btn,
+.answer-edit-btn {
+    background-color: #1cbfff;
+    color: white;
+    /* font-weight: bold; */
+    opacity: 0.9;
+}
+
+.main-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.main-content,
+.answers-container
+ {
+    border-radius: 15px;
+}
+.no-answers-found {
+    padding: 0 333px;
+    margin-top: 20px;
+}
+
+.question-content {
+    margin:10px
+}
+
+.title-card {
+    margin: 50px 300px 10px 300px;
+}
+
+.question-page-card {
+    padding: 0px 0px 50px 0px;
+}
+
+.question-content {
+    padding: 0px 40px 0px 40px;
+    font-size: large;
+}
+
+#new-answer-create {
+    width: 300px;
+    margin-left: 28%;
+    height: 50px;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    color: whitesmoke;
+}

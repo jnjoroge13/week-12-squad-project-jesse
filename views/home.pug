@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    script(src="/javascripts/sandbag.js" type="module")
+    link(rel="stylesheet" href="/stylesheets/home.css")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Welcome! | StackCode 
+  body 
+    div(class="background-for-home")
+      div(class="home-container")
+        a(class="home-one" href="/home") Home 🏚!
+        p(id='home')   Welcome to StackCode 
+    div(class="background-for-login")
+      div(class="login-container")
+        a(class="login-two" href="/users/login") Login  ⌨️
+        //- p(id='login') Would You Like To Login?
+        div(class="demo-container")
+        a(class="login-two" href="/users/demo") Full Access 😈
+        //- p(id='demo') Demo User 
+    div(class="background-for-about")
+      div(class="about-container")
+        a(class="about-three" href="/about") About! 👨‍👨‍👦‍👦
+        p(id='about') Meet The Team!
+    //- div(class='background-for-home-text')
+    //-   div(class='welcome-container')  Welcome to StackCode 🏚!
+    //- div(class='background-for-login-text')
+    //-   div(class='login-container')  Would You Like To Login? 🥺
+    //-   div(class='demo-container')  Demo User? 😳
+    //- div(class='background-for-about-text')
+    //-   div(class='meet-container')  Meet The Team 👨‍👨‍👦‍👦!

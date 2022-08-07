@@ -1,0 +1,18 @@
+extends layout.pug
+
+include utils.pug
+
+block content
+  +validationErrorSummary(errors)
+  form(action='/questions/create' method='post' class="new-question-div")
+    input(type='hidden' name='_csrf' value=csrfToken)
+    div(id=`${fieldName}-div`)
+      label(for="title" id="create-question-title-label")="Title"
+      <br>
+      input(type="text" id="create-question-title" name="title")
+    div(id=`${fieldName}-div`)
+      label(for="content" id="create-question-content-label")="Content"
+      textarea(type="textarea" cols="70" rows="10" name="content" id="create-question-content")
+    div(class='create-cancel-btns')
+      button(type='submit' class='btn create-btn') Create Question
+      a(href='/questions' class='btn cancel-btn') Cancel
